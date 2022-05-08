@@ -1,0 +1,21 @@
+.scoreBoxContainer{
+    margin: 5% 0;
+    min-height: 50vh;
+    width: 80%;
+    background-color: rgb(59, 59, 59);
+
+    border-radius: 20px;
+    color: rgb(219, 216, 216);
+    font-size: 1.75rem;
+    line-height: 150%;
+
+
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.scoreBoxInnerContainer{
+    margin: 2rem;
+
+
+}

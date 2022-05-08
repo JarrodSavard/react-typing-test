@@ -1,0 +1,12 @@
+.footerContainer {
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(114, 95, 224);
+    color: #fefefe;
+    position: absolute;
+    bottom:-1;
+    width: 100%;
+}

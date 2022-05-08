@@ -1,0 +1,6 @@
+.testPageContainer{
+  display: flex;
+  min-height: 83.5vh;
+  align-items: center;
+  justify-content: center;
+}
