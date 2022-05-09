@@ -1,12 +1,40 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./ScoreBox.css"
 
-const ScoreBox = () => {
+const ScoreBox = ({pressHandler}) => {
+  const words = "word"
+  const [current, setCurrent] = useState(0)
+  const [key, setKey] = useState(undefined)
+  const [word, setWord] = useState("word")
+
+  function keyDownHandler() {
+
+
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', (key) => {
+      setKey(key["key"])
+      console.log(key['key']);
+    })
+  },[])
+
+  useEffect(() => {
+    if (word[current - 1] === key) {
+          console.log("successful");
+        }
+        setCurrent(prev => prev + 1)
+    console.log((word[current]));
+  },[key])
+
   return (
-    <div className='scoreBoxContainer'>
-      <div className="scoreBoxInnerContainer">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minus quasi dolores temporibus ratione ipsum quo ipsam perferendis distinctio magni incidunt inventore sequi officia, quibusdam dolorem quos reiciendis consectetur impedit deserunt. Similique expedita odit deleniti tenetur repellendus porro sequi facilis ab eius deserunt error, ullam rem, veritatis officiis. Minus dolore id rem ipsum, ex quis! Voluptatibus nam voluptate sint autem quisquam accusantium nostrum, iusto nisi natus, ducimus harum eos. Nihil inventore cupiditate, eius, fugiat, accusantium est accusamus assumenda nulla aliquam distinctio natus culpa vitae sit quo harum dolorem atque ex vel. Enim ad, quisquam repellendus incidunt consectetur aliquam ab ullam neque veritatis earum corrupti, esse dolorum nostrum! Reiciendis repellendus dolor eos modi similique repudiandae quaerat facere reprehenderit deleniti laudantium odit possimus excepturi qui magnam quidem aut voluptates, voluptatem officia, vero et quasi corrupti magni rerum. Magni debitis ratione impedit praesentium totam deleniti minus nulla consequuntur fugiat ex id ab adipisci odit incidunt ipsum exercitationem enim iusto, quisquam nobis saepe autem veniam. Culpa aut eos aliquid delectus animi dicta quae qui eaque, consequuntur quam fugiat consequatur quos velit commodi assumenda? Labore, maiores! Cumque ab vitae explicabo suscipit a odit unde, aliquam nihil earum veritatis repellat, officiis repudiandae minus molestiae voluptas dolor.
+    <div tabIndex='0' className='scoreBoxContainer'>
+      <div className="scoreBoxInnerContainer" >
+        {words}
       </div>
+      {word[current]}
+      {key}
+      {current}
     </div>
   )
 }

@@ -1,5 +1,6 @@
 .testPageContainer{
   display: flex;
+  flex-direction: column;
   min-height: 83.5vh;
   align-items: center;
   justify-content: center;

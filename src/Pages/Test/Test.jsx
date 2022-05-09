@@ -3,6 +3,10 @@ import './Test.css';
 import ScoreBox from '../../Components/ScoreBox/ScoreBox';
 
 const Test = () => {
+
+
+
+
   return (
     <div className='testPageContainer'>
       <ScoreBox />
